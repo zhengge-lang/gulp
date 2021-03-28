@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/zhengge-lang/gulp/issues"
   },
-  "homepage": "https://github.com/zhengge-lang/gulp#readme"
+  "homepage": "https://github.com/zhengge-lang/gulp#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
