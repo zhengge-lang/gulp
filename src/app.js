@@ -6,5 +6,11 @@ Vue.component('g-icon',Icon)
 
 new Vue({
     el: '#app',
-   
+   data() {
+       return {
+           loading:false,
+           loading2:false,
+           loading3:false
+       }
+   },
 })

@@ -1,8 +1,7 @@
 <template>
-     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-         <g-icon class="icon" v-if="icon" :name="icon"></g-icon>
-         <!-- <g-icon class="icon" v-if="icon" :name="loading"></g-icon> -->
-         <g-icon class="loading" name="loading"> </g-icon>
+     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+         <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
+         <g-icon  v-if="loading" class="loading icon" name="loading"> </g-icon >
          <div class="content">
             <slot></slot>
          </div>
@@ -14,6 +13,10 @@ export default {
 // 为了避免iconPosition传的是undefined，所以要设置默认值left
     props:{
         icon: {},
+        loading:{
+            type:Boolean,
+            default:false
+        },
         iconPosition:{
             type:String,
             default:'left',
@@ -29,7 +32,8 @@ export default {
             //更简化:return value === 'left' || value === 'right'
             }
         }
-    }
+    },
+    methods:{}
 }
 </script>
 <style lang="scss">

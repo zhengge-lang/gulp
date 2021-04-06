@@ -35,10 +35,9 @@
 </head>
 <body>
     <div id="app"> 
-        <g-button icon="setting" icon-position="right"> 父级按钮111</g-button>
-        <g-button icon="setting" icon-position="left"> 父级按钮111</g-button>
-        
-        <g-button > 父级按钮111</g-button>
+        <g-button :loading="loading" @click="loading =!loading" > 父级按钮111</g-button>
+        <g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 =!loading2"> 父级按钮111</g-button>
+        <g-button icon="setting" icon-position="left" :loading="loading3" @click="loading3 =!loading3"> 父级按钮111</g-button>
         <g-icon name="download"> </g-icon>
         
     </div>
