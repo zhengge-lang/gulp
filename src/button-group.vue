@@ -29,7 +29,9 @@ export default {
         vertical-align: middle;
         > .g-button{
             border-radius:0 ;
-            margin-left: -1px;
+            &:not(:first-child){
+                margin-left: -1px;
+            }
             //之前的样式问题是因为两个border连在一起，所以看上去变厚了，现在使用margin-left，让各按钮的边框重叠，当鼠标hover时，让其浮上来：z-index为1
             &:hover{
                 position: relative;
