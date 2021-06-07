@@ -8,9 +8,14 @@
      </button>
 </template>
 <script>
+import Icon from './icon'
+
 export default {
 //   props:['icon','iconPosition']
 // 为了避免iconPosition传的是undefined，所以要设置默认值left
+    components:{
+        'g-icon':Icon
+    },
     props:{
         icon: {},
         loading:{
